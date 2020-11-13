@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <tittle>Exercício 05 - Módulo 01</tittle>
+    </head>
+    <body>
+
+        <!-- Dado o seguinte vetor de objetos:
+        var usuarios = [
+        {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+        ];
+        Escreva uma função que produza o seguinte resultado:
+        O Diego possui as habilidades: Javascript, ReactJS, Redux
+        O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+        Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+        com um separador utilize o join. -->
+
+        <script>
+            
+            var usuarios = [
+            {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+
+            ];
+
+            const showMessage = usuarios => {
+            for (const user of usuarios) {
+            const { nome, habilidades } = user;
+            console.log(`O ${nome} possui as habilidades: ${habilidades.join(", ")}`);
+            }
+            };
+
+            showMessage(usuarios); 
+        </script>
+    </body>
+</html>
